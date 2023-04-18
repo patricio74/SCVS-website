@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.center {
+
+  display:flex;
+  flex-direction:row;
+    flex-wrap: wrap;
+
+}
+
+.pageTitle{
+text-align: center;
+font-size: 55px;
+  text-shadow: 2px 2px 5px #606060;
+  color: #eeba2b;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+  margin: 25px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+}
+.candName{
+text-align: center;
+font-size: large;
+color: #eeba2b;
+}
+.candDescription{
+color: #14202e;
+}
+
+</style>
+</head>
+<body>
+
+<h2 class="pageTitle">Candidates Card</h2>
+
+<div class="center">
+
+<div class="card">
+  <img src="img_avatar2.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4 class="candName"><b>Jane Doe</b></h4> 
+    <p class="candDescription">Interior Designer</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="img_avatar2.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4 class="candName"><b>Jane Doe</b></h4> 
+    <p class="candDescription">Interior Designer</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="img_avatar2.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4 class="candName"><b>Jane Doe</b></h4> 
+    <p class="candDescription">Interior Designer</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="img_avatar2.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4 class="candName"><b>Jane Doe</b></h4> 
+    <p class="candDescription">Interior Designer</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="img_avatar2.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4 class="candName"><b>Jane Doe</b></h4> 
+    <p class="candDescription">Interior Designer</p> 
+  </div>
+</div>
+
+</div>
+</div>
+</body>
+</html> 

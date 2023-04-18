@@ -1,0 +1,33 @@
+<button>
+    LOGIN
+</button>
+
+
+
+
+css
+
+button {
+  padding: 12.5px 30px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #eeba2b;
+  color: #f2f2f2;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+button:hover {
+  background-color: #f5cc5b;
+  box-shadow: 0 0 20px #eeba2b;
+  cursor: pointer;
+  color: #212121;
+}
+
+button:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+}
