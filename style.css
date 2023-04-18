@@ -1,32 +1,44 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     padding: 25px;
-    background-color: #e8e8e8;
+    background-color: #f2f2f2;
     color: #212121;
     font-size: 18px;
+    scroll-behavior: smooth;
+    margin: 0;
+    position: relative;
+   /**
+   display:flex;
+    flex-direction:column;
+    **/
+    min-height: 100vh;
   }
 
 .pageTitle{
-  margin-top: 3rem;
   text-align: center;
   word-wrap: break-word;
-  text-shadow: 2px 2px 5px #747474;
+  text-shadow: 2px 2px 5px #adadad;
+  margin: 10px;
 }
 
 .goldText{
 color: #daa520;
-text-shadow: 2px 2px 5px #747474;
+text-shadow: 2px 2px 5px #adadad;
 }
 
 .pageDescription{
+  color:#183153;
   text-align: center;
   opacity: 94%;
 }
+
   .dark-mode {
-    background-color: #212121;
+    background-color: #14202e;
     color: #e8e8e8;
   }
 
@@ -52,7 +64,7 @@ text-shadow: 2px 2px 5px #747474;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #14202e;
+  background-color: #183153;
   transition: .4s;
   border-radius: 30px;
 }
@@ -147,10 +159,25 @@ text-shadow: 2px 2px 5px #747474;
   gap: 10px;
   padding: 30px 40px;
   box-shadow: 0 0 5px rgba(0, 0, 0, .2);
-  border-radius: 5px;
+  border-radius: 25px;
   font-family: inherit;
   margin: 3rem  auto; 
-  padding-top: 3rem;
+  padding: 3rem;
+}
+
+.formTitle{
+  color: #14202e;
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.iconLogin{
+  height: auto;
+  width: 92px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
 }
 
 .input {
@@ -160,7 +187,7 @@ text-shadow: 2px 2px 5px #747474;
   border: none;
   margin-top: 15px;
   box-shadow: inset 0 1px 1px #00000033, 0 .5px .5px #00000033;
-  outline: none;
+  outline : solid 1px #14202e94;
 }
 
 .input:focus {
@@ -178,25 +205,27 @@ text-shadow: 2px 2px 5px #747474;
   width: 100%;
   padding: 10px 20px;
   align-self: center;
-  background: #daa520;
+  background: #14202e;
   border: none;
   border-radius: 5px;
-  color: #14202e;
+  color: #e8e8e8;
   font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
 }
 
 #loginBtn:hover {
-  background: #f7d13b;
+  background: #daa520;
+  color: #14202e;
 }
 
-#createAccountBtn {
+/**
+#registerBtn {
   margin-top: 20px;
   margin-bottom: 10px;
   padding: 15px 15px;
   align-self: center;
-  background: #14202e;
+  background: #183153;
   border: none;
   border-radius: 5px;
   color: #f2f2f2;
@@ -205,7 +234,16 @@ text-shadow: 2px 2px 5px #747474;
   cursor: pointer;
 }
 
-#createAccountBtn:hover {
-  background: #1f2d3d;
+#registerBtn:hover {
+  background: #14202e;
 }
+**/
 
+#registerText{
+  color: #14202e;
+  margin-top: 10px;
+  font-size: 13px;
+}
+#registerLink{
+  text-decoration: none;
+}
