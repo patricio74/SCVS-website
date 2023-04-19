@@ -15,7 +15,7 @@
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 38px;
     text-decoration: none;
     font-size: 17px;
   }
@@ -43,18 +43,19 @@
   
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f2f2f2;
+    background-color: #e8e8e8;
     color: #14202e;
     font-size: 16px;
     scroll-behavior: smooth;
     word-wrap:break-word;
     margin: 0;
+    position: relative;
 }
 
 .light-bg{
-    background-color: #e8e8e8;
     color: #14202e;
     left: 0;
+    top: 0;
     width: 100%;
     padding: 3%;
     min-height: 100vh;
@@ -64,8 +65,10 @@ body {
     background-color: #14202e;
     color: #f2f2f2;
     left: 0;
+    top: 0;
     width: 100%;
     padding: 3%;
+    min-height: 100vh;
 }
 
 .dark-bg .card{
@@ -111,6 +114,57 @@ body {
     display: none; /* Hide icon by default */
   }
   
+/* Style the counter cards */
+.card {
+    border-radius: 25px;
+    text-align: center;
+    background-color: #14202e;
+    color: #e8e8e8;
+    box-shadow: 2px 2px 15px #14202ec5, 2px 2px 2px #14202ec5;
+    margin-bottom: 10%;
+    padding: 55px 18px;
+}
+
+.card:hover{
+    background-color: #1a2838;
+}
+
+.cname{
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #daa520;
+}
+
+
+.ctext{
+    padding: 0 20px;
+    font-size: 14px;
+    opacity: 84%;
+    text-align: left;
+}
+
+.profile-pic{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: #14202e solid 1px;
+    box-shadow: 1px 1px 25px #616e80;
+}
+
+footer{
+    text-align: center;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    color: #e8e8e8;
+    background-color: #14202e;
+}
+
   /* Media query for small screens */
   @media screen and (max-width: 600px) {
     /* Show hamburger icon */
@@ -149,41 +203,4 @@ body {
   .vote-position{
     font-size: 24px;
   }
-}
-
-/* Style the counter cards */
-.card {
-    border-radius: 25px;
-    text-align: center;
-    background-color: #14202e;
-    color: #e8e8e8;
-    box-shadow: 2px 2px 15px #14202ec5, 2px 2px 15px #14202ec5;
-    margin-bottom: 10%;
-    padding: 55px 18px;
-}
-
-.card:hover{
-    background-color: #1a2838;
-}
-
-.cname{
-    font-weight: bold;
-    font-size: 1.4rem;
-    color: #daa520;
-}
-
-
-.ctext{
-    padding: 0 20px;
-    font-size: 14px;
-    opacity: 84%;
-    text-align: left;
-}
-
-.profile-pic{
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border: #14202e solid 1px;
-    box-shadow: 1px 1px 25px #616e80;
 }
