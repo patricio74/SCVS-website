@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+
 /* Add a black background color to the top navigation */
 .topnav {
     overflow: hidden;
@@ -35,7 +40,7 @@
   .topnav .icon {
     display: none;
   }
-  
+    
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #e8e8e8;
@@ -45,75 +50,122 @@ body {
     word-wrap:break-word;
     margin: 0;
     position: relative;
-    text-align: center;
-    min-height: 100vh;
 }
 
-html {
-    box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  .page-title{
+.light-bg{
+    color: #14202e;
+    background-color: #e8e8e8;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-bottom: 3%;
+    min-height: 50vh;
+}
+.space{
+    height: 20vh;
+}
+.about{
+    min-height: 100vh;
+    margin: auto;
+}
+
+.page-title{
     text-align: center;
     font-size: 36px;
     padding: 10px 60px;
     font-weight: bold;
 }
 
-.page-description{
-    padding: 10px 120px;
+.members{
     text-align: center;
+    font-size: 24px;
+}
+
+.page-description{
+    padding: 10px 20rem;
+    text-align: justify;
     font-size: 18px;
 }
 
-.row{
-    padding: 15px 25px;
+/* Float four columns side by side */
+.column {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    margin: auto;
+    width: 350px;
 }
 
-.cpicture{
-    width: 100%;
-    height: auto;
+/* Remove extra left and right margins, due to padding */
+.row {
+    text-align: center;
+    margin: 0;
+    padding: 0 7px;
 }
 
-.cposition{
-    font-weight: bold;
-}
-
-  .column {
-    float: left;
-    width: 33.3%;
-    margin-bottom: 16px;
-    padding: 0 8px;
-  }
-  
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
-      display: block;
-    }
-  }
-  
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  .container {
-    padding: 0 16px;
-  }
-  
-  .container::after, .row::after {
+/* Clear floats after the columns */
+.row:after {
     content: "";
-    clear: both;
     display: table;
+    clear: both;
+}
+
+/* Style for hamburger icon */
+.topnav .icon {
+    display: none; /* Hide icon by default */
   }
   
-  .title {
-    color: grey;
-  }
+/* Style the counter cards */
+.card {
+    overflow: hidden;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #14202e;
+    color: #e8e8e8;
+    box-shadow: 2px 2px 15px #14202ec5, 2px 2px 2px #14202ec5;
+    margin-bottom: 10%;
+    padding: 55px 18px;
+}
+
+.card:hover{
+    background-color: #1a2838;
+}
+
+.cname{
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #daa520;
+}
+
+
+.ctext{
+    padding: 0 20px;
+    font-size: 14px;
+    opacity: 84%;
+    text-align: center;
+}
+
+.profile-pic{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: #14202e solid 1px;
+    box-shadow: 1px 1px 25px #616e80;
+}
+
+footer{
+    text-align: center;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #e8e8e8;
+    background-color: #14202e;
+}
 
   /* Media query for small screens */
   @media screen and (max-width: 600px) {
@@ -142,12 +194,23 @@ html {
       display: block; /* Display links as block */
       text-align: left; /* Align text to left */
     }
-    .page-title{
-      font-size: 26px;
-      font-weight: bold;
-    }
-    .page-description{
-      padding: 25px 40px;
-      font-size: 15px;
   }
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    padding-bottom: 20px;
   }
+  .page-title{
+    font-size: 26px;
+    font-weight: bold;
+  }
+  .page-description{
+    padding: 25px 40px;
+    font-size: 15px;
+}
+footer{
+    font-size: 10px;
+}
+}
