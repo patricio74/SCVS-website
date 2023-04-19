@@ -13,27 +13,22 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="topnav" id="navbarr">
             <a href="index.html" class="active">SCVS</a>
-            <a href="#candidates">Candidates</a>
+            <a href="candidates.html">Candidates</a>
             <a href="#candidates">View Result</a>
             <a href="#about">About</a>
             <a href="javascript:void(0);" class="icon" onclick="navbarr()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
-        <!--
-            <h2 class="pageTitle">
-                STUDENT COUNCIL VOTING SYSTEM
-            </h2>
-            -->
         <!--login form-->
-        <form class="form">
+        <form class="form" method="post">
             <img src="assets/images/icon92px.png" alt="icon" class="iconLogin">
             <p class="formTitle">Welcome to SCVS website!</p>
             <input placeholder="Email address" class="input" type="text">

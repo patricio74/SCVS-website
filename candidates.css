@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    background-color: #14202e;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #183153;
+    color: #f2f2f2;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    color: #daa520;
+    font-weight: bold;
+  }
+  
+  .topnav a.active:hover {
+    color: #f2f2f2;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+  
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    color: #14202e;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    word-wrap:break-word;
+    margin: 0;
+}
+
+.light-bg{
+    background-color: #e8e8e8;
+    color: #14202e;
+    left: 0;
+    width: 100%;
+    padding: 3%;
+    min-height: 100vh;
+}
+
+.dark-bg{
+    background-color: #14202e;
+    color: #f2f2f2;
+    left: 0;
+    width: 100%;
+    padding: 3%;
+}
+
+.dark-bg .card{
+    background-color: #f2f2f2;
+    color: #14202e;
+}
+
+.dark-bg .card:hover{
+    background-color: #ffffff;
+}
+
+.vote-position{
+    text-align: center;
+    font-size: 32px;
+}
+
+/* Float four columns side by side */
+.column {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    margin: auto;
+    width: 350px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    text-align: center;
+    margin: 0;
+    padding: 0 7px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style for hamburger icon */
+.topnav .icon {
+    display: none; /* Hide icon by default */
+  }
+  
+  /* Media query for small screens */
+  @media screen and (max-width: 600px) {
+    /* Show hamburger icon */
+    .topnav a:not(:first-child) {
+      display: none; /* Hide all links except first child */
+    }
+    .topnav a.icon {
+      float: right; /* Float icon right */
+      display: block; /* Show icon */
+    }
+  }
+  
+  /* Style for responsive menu */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {
+      position: relative; /* Set position to relative */
+    }
+    .topnav.responsive .icon {
+      position: absolute; /* Set position to absolute */
+      right: 0; /* Align icon to right */
+      top: 0; /* Align icon to top */
+    }
+    .topnav.responsive a {
+      float: none; /* Remove float */
+      display: block; /* Display links as block */
+      text-align: left; /* Align text to left */
+    }
+  }
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .vote-position{
+    font-size: 24px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+    border-radius: 25px;
+    text-align: center;
+    background-color: #14202e;
+    color: #e8e8e8;
+    box-shadow: 2px 2px 15px #14202ec5, 2px 2px 15px #14202ec5;
+    margin-bottom: 10%;
+    padding: 55px 18px;
+}
+
+.card:hover{
+    background-color: #1a2838;
+}
+
+.cname{
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #daa520;
+}
+
+
+.ctext{
+    padding: 0 20px;
+    font-size: 14px;
+    opacity: 84%;
+    text-align: left;
+}
+
+.profile-pic{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: #14202e solid 1px;
+    box-shadow: 1px 1px 25px #616e80;
+}
