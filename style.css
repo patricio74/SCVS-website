@@ -34,25 +34,24 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  border-radius: 50px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #183153;
   color: #f2f2f2;
-  border-radius: 50px;
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: #183153;
-  color: #daa520;
+  color: #14202e;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .topnav a.active:hover {
-  background-color: #183153;
-  color: #f2f2f2;
+  background-color: #f2f2f2;
+  color: #14202e;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -65,12 +64,6 @@ body {
   word-wrap: break-word;
   text-shadow: 2px 2px 5px #adadad;
   margin: 60px 10px;
-}
-
-.pageDescription{
-  color:#183153;
-  text-align: center;
-  opacity: 94%;
 }
 
 /* login form */
@@ -93,6 +86,7 @@ body {
   font-size: 22px;
   text-align: center;
   font-weight: bold;
+  margin-bottom: 10px 0;
 }
 
 .iconLogin{
@@ -100,7 +94,6 @@ body {
   width: 92px;
   display: block;
   margin: 0 auto;
-  padding: 10px 0;
 }
 
 .input {
@@ -108,7 +101,7 @@ body {
   padding: 15px 10px;
   border-radius: 5px;
   border: none;
-  margin-top: 15px;
+  margin: 15px 0 0 0;
   box-shadow: inset 0 1px 1px #00000033, 0 .5px .5px #00000033;
   outline : solid 1px #14202e94;
   color: #14202e;
@@ -129,7 +122,6 @@ body {
 }
 
 #loginBtn {
-  margin-top: 20px;
   width: 100%;
   padding: 10px 20px;
   align-self: center;
@@ -140,6 +132,7 @@ body {
   font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 #loginBtn:hover {
@@ -149,7 +142,7 @@ body {
 
 #registerText{
   color: #14202e;
-  margin-top: 10px;
+  margin: 10px 0;
   font-size: 13px;
 }
 #registerLink{
@@ -196,23 +189,19 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  border-radius: 50px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #183153;
   color: #f2f2f2;
-  border-radius: 50px;
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: #183153;
   color: #daa520;
 }
 .topnav a.active:hover {
-  background-color: #183153;
+  background-color: #14202e;
   color: #f2f2f2;
 }
 
@@ -289,4 +278,5 @@ body {
     display: block;
     text-align: left;
   }
+}
 }
