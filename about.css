@@ -28,7 +28,7 @@
   
   /* Add an active class to highlight the current page */
   .topnav a.active {
-    color: #daa520;
+    color: #ffbf00;
     font-weight: bold;
   }
   
@@ -135,7 +135,7 @@ body {
 .cname{
     font-weight: bold;
     font-size: 1.4rem;
-    color: #daa520;
+    color: #ffbf00;
 }
 
 
