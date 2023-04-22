@@ -28,21 +28,28 @@
             </a>
         </div>
         <!--login form-->
+        <?php include "login.php"; ?>
         <form class="form" method="post">
             <img src="assets/images/icon92px.png" alt="icon" class="iconLogin">
             <p class="formTitle">Welcome to SCVS website!</p>
-            <input placeholder="Email address" class="input" type="text">
-            <input placeholder="Password" class="input" type="password" id="password"> 
+            <input placeholder="Email address" class="input" type="text" name="email">
+            <input placeholder="Password" class="input" type="password" id="password" name="password"> 
             <!--show password checkbox-->
             <label for="showPass" class="checkbox">
-                <input type="checkbox" id="showPass" onclick="showPassword()">
-                    <span class="showPass">show</span>
+              <input type="checkbox" id="showPass" onclick="showPassword()">
+              <span class="showPass">show</span>
             </label>
-            <button id="loginBtn" formaction="#">Log in</button>
-            <p id="registerText">Don't have account yet? Register
-                <a href="#register" id="registerLink">here</a>.
-            </p>
+            <button id="loginBtn" type="submit">Log in</button>
+                <p id="registerText">Don't have account yet? Register
+                    <a href="#register" id="registerLink">here</a>.
+                </p>
         </form>
+        
+        <!-- Display an error message if there is one -->
+        <?php if (isset($error)): ?>
+            <p><?php echo $error; ?></p>
+        <?php endif; ?>
+
         <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
