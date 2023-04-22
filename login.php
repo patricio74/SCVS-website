@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Store user data in session
     $_SESSION['user'] = $result->fetch_assoc();
 
-    // Redirect to hello.html
-    header("Location: hello.html");
+    // Redirect to voting page
+    header("Location: candidates.html");
     exit;
   } else {
     // Display error message
