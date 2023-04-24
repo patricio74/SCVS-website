@@ -106,11 +106,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <a href="register.php" id="registerLink">here</a>.
                 </p>
         </form>
-        
-        <!-- Display an error message if there is one -->
-        <?php if (isset($error)): ?>
-            <p><?php echo $error; ?></p>
-        <?php endif; ?>
 
         <script type="text/javascript" src="script.js"></script>
     </body>
