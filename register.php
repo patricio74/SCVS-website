@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1A.0">
     <title>Registration form -SCVS</title>
         <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,10 +64,35 @@
       <input type="text" id="middle_name" name="middle_name" oninput="this.value = this.value.toUpperCase()" required><br>
 
       <label for="course">Course:</label>
-      <input type="text" id="course" name="course" oninput="this.value = this.value.toUpperCase()" required><br>
+      <select name="course" id="course">
+        <option value="BS INFORMATION TECHNOLOGY">BS INFORMATION TECHNOLOGY</option>
+        <option value="BS COMPUTER ENGINEERING">BS COMPUTER ENGINEERING</option>
+        <option value="BS ELEMENTARY EDUCATION">BS ELEMENTARY EDUCATION</option>
+        <option value="BS SECONDARY EDUCATION">BS SECONDARY EDUCATION</option>
+        <option value="BS ENTREPRENEURSHIP">BS ENTREPRENEURSHIP</option>
+        <option value="BS BUSINESS MANAGEMENT">BS BUSINESS MANAGEMENT</option>
+      </select><br>
 
       <label for="year">Year:</label>
-      <input type="text" id="year" name="year" oninput="this.value = this.value.toUpperCase()" required><br>
+      <select name="year" id="year">
+        <option value="1A">1A</option>
+        <option value="1B">1B</option>
+        <option value="1C">1C</option>
+        <option value="1D">1D</option>
+        <option value="2A">2A</option>
+        <option value="2B">2B</option>
+        <option value="2C">2C</option>
+        <option value="2D">2D</option>
+        <option value="3A">3A</option>
+        <option value="3B">3B</option>
+        <option value="3C">3C</option>
+        <option value="3D">3D</option>
+        <option value="4A">4A</option>
+        <option value="4B">4B</option>
+        <option value="4C">4C</option>
+        <option value="4D">4D</option>
+      </select><br>
+
 
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required><br>
