@@ -12,12 +12,16 @@ function toggleTheme() {
 
 //pangview ng password
  function showPassword() {
-    var x = document.getElementById("password");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
+  var passwordField = document.getElementById("password");
+  var showButton = document.querySelector("#password + button");
+
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    showButton.textContent = "Hide";
+  } else {
+    passwordField.type = "password";
+    showButton.textContent = "Show";
+  }
   }
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */

@@ -2,6 +2,69 @@
     Perez, John Patrick A.
     BSIT-3F
 -->
+<?php
+// Start a session to store user data
+session_start();
+
+// Check if the form was submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  // Get form input values
+  $email = $_POST['email'];
+  $user_password = $_POST['password'];
+
+  // Connect to database
+  $servername = "db4free.net";
+  $username = "patricc";
+  $password = "votingsystem";
+  $dbname = "voting_system";
+
+  $conn = new mysqli($servername, $username, $password, $dbname);
+
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+
+  // Prepare SQL statement to select user with matching email and password
+  $stmt = $conn->prepare("SELECT * FROM voters WHERE email = ? AND pass = ?");
+  $stmt->bind_param("ss", $email, $user_password);
+  $stmt->execute();
+  $result = $stmt->get_result();
+
+  // Check if a user was found
+  if ($result->num_rows === 1) {
+    // Store user data in session
+    $_SESSION['user'] = $result->fetch_assoc();
+
+      // Check if user has already voted
+      if ($_SESSION['user']['votestatus'] === 'voted') {
+        //pang logout
+      // session_destroy();
+        // Display error message and return to login page button
+        echo "<p>You have already voted and cannot vote again. <br/> click the button below to logout and return to login page.</p>";
+        echo "<form action='logout.php'><button type='submit'>Logout</button></form>";
+        exit;
+      } else {
+        // Redirect to voting page
+        header("Location: voting.php");
+        exit;
+      }
+  } else {
+    // Display error message
+    $error = "Invalid email or password.";
+    //pang logout
+    session_destroy();
+    // Display error message and return to login page button
+    echo "<p>Please check your email/password and login again.</p>";
+    echo "<form action='index.php'><button type='submit'>Return</button></form>";
+    exit;
+  }
+  // Close database connection
+  $stmt->close();
+  $conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,17 +82,16 @@
     </head>
     <body>
         <div class="topnav" id="navbarr">
-            <a href="index.html" class="active">SCVS</a>
+            <a href="index.php" class="active">SCVS</a>
             <a href="candidates.html">Candidates</a>
-            <a href="#candidates">Result</a>
+            <a href="result.php">Result</a>
             <a href="about.html">About</a>
             <a href="javascript:void(0);" class="icon" onclick="navbarr()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
         <!--login form-->
-        <?php include "login.php"; ?>
-        <form class="form" method="post" action="login.php">
+        <form class="form" method="post">
             <img src="assets/images/icon92px.png" alt="icon" class="iconLogin">
             <p class="formTitle">Welcome to SCVS website!</p>
             <input placeholder="Email address" class="input" type="text" name="email">
@@ -41,7 +103,7 @@
             </label>
             <button id="loginBtn" type="submit">Log in</button>
                 <p id="registerText">Don't have account yet? Register
-                    <a href="#register" id="registerLink">here</a>.
+                    <a href="register.php" id="registerLink">here</a>.
                 </p>
         </form>
         
