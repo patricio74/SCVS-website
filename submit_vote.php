@@ -102,19 +102,15 @@ if (mysqli_num_rows($result) > 0) {
     ('$Third_Year_Representative', '$Third_Year_position'),
     ('$Fourth_Year_Representative', '$Fourth_Year_position')";
 
+    $query = "UPDATE voters SET votestatus = 'voted' WHERE email = '$email'";
     if (mysqli_query($conn, $query)) {
-        $updateQuery = "UPDATE voters SET votestatus = 'voted' WHERE email = '$email'";
-        
-        if (mysqli_query($conn, $updateQuery)) {
-            // Success message and redirection
-            header("Location: vote_success.html");
-            exit;
-        } else {
-            echo "<script>alert('Error submitting your vote!');</script>";
-            echo "<script>window.location.href='index.php';</script>";
-        }
+        // Success message and redirection
+        header("Location: vote_success.html");
+        exit;
+    } else {
+        echo "<script>alert('Error submitting your vote!');</script>";
+        echo "<script>window.location.href='index.php';</script>";
     }
 }
-
 mysqli_close($conn);
 ?>
