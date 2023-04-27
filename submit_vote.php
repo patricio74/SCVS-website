@@ -48,7 +48,8 @@ $result = mysqli_query($conn, $sql);
     }
     else {
     // Insert the vote into the database and update the voter's vote status
-    $query = "INSERT INTO candidates (full_name, position) VALUES ('$president', '$president_position'), ('$vice_president', '$vice_president_position')";
+    $query = "INSERT INTO candidates (full_name, position) VALUES ('$president', '$president_position'),
+     ('$vice_president', '$vice_president_position')";
     $query = "UPDATE voters SET votestatus = 'voted' WHERE email = '$email';";
         if (mysqli_multi_query($conn, $query)) {
         echo "<script>alert('Vote submitted successfully! Click ok to return to login page.');</script>";

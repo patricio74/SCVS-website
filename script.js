@@ -13,7 +13,7 @@ function toggleTheme() {
 //pangview ng password
  function showPassword() {
   var passwordField = document.getElementById("password");
-  var showButton = document.querySelector("#password + button");
+  var showButton = document.querySelector("#pass + button");
 
   if (passwordField.type === "password") {
     passwordField.type = "text";

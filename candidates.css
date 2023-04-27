@@ -65,13 +65,13 @@ html {
 }
 
 .page-description{
-    padding: 10px 120px;
+    padding: 5px 120px;
     text-align: center;
     font-size: 18px;
 }
 
 .row{
-    padding: 15px 25px;
+    padding: 2rem 1.5rem;
 }
 
 .cpicture{
@@ -87,7 +87,7 @@ html {
     float: left;
     width: 33.3%;
     margin-bottom: 16px;
-    padding: 0 8px;
+    padding: 0 10px;
   }
   
   @media screen and (max-width: 650px) {
@@ -96,11 +96,24 @@ html {
       display: block;
     }
   }
-  
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  h2{
+    color: #ffbf00;
   }
-  
+  h3{
+    color: #152d49;
+    padding-top: 25px;
+  }
+  .card {
+    box-shadow: 0 6px 12px 0 #6363639f;
+    background-color: #14202e;
+    color: #f2f2f2;
+    border-radius: 0 0 50px 0 ;
+  }
+  .card:hover {
+    box-shadow: 0 6px 12px 0 #3333339f;
+    background-color: #183153;
+    color: #ffffff;
+  }
   .container {
     padding: 0 16px;
   }
@@ -112,9 +125,19 @@ html {
   }
   
   .title {
-    color: grey;
+    color: #e8e8e8;
+  }
+  table {
+    background-color: #ffffff;
+    margin: 0 auto; /* Center the table horizontally */
+    width: 70%; /* Adjust the width as desired */
+    border-collapse: collapse; /* Collapse table borders */
   }
 
+  th, td {
+      border: 1px solid black; /* Add border to table cells */
+      padding: 8px; /* Add padding to table cells for spacing */
+  }
   /* Media query for small screens */
   @media screen and (max-width: 600px) {
     /* Show hamburger icon */

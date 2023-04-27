@@ -41,8 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //pang logout
       // session_destroy();
         // Display error message and return to login page button
-        echo "<p>You have already voted and cannot vote again. <br/> click the button below to logout and return to login page.</p>";
-        echo "<form action='logout.php'><button type='submit'>Logout</button></form>";
+        //echo "<p>You have already voted and cannot vote again. <br/> click the button below to logout and return to login page.</p>";
+        //echo "<form action='logout.php'><button type='submit'>Logout</button></form>";
+        header("Location: errr.html");
         exit;
       } else {
         // Redirect to voting page
