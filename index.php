@@ -95,8 +95,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form class="form" method="post">
             <img src="assets/images/icon92px.png" alt="icon" class="iconLogin">
             <p class="formTitle">Welcome to SCVS website!</p>
-            <input placeholder="Email address" class="input" type="text" name="email">
-            <input placeholder="Password" class="input" type="password" id="password" name="password"> 
+            <input placeholder="Email address" class="input" type="text" name="email" required>
+            <input placeholder="Password" class="input" type="password" id="password" name="password" required> 
             <!--show password checkbox-->
             <label for="showPass" class="checkbox">
               <input type="checkbox" id="showPass" onclick="showPassword()">

@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
         <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="register.css">
 </head>
 <body>
     <?php
@@ -69,29 +69,25 @@
     </div>    
     <!--login form-->
     <form class="form" method="post">
-            <img src="assets/images/icon92px.png" alt="icon" class="iconLogin">
-            <p class="formTitle">Make your voice heard. <br/>Register to SCVS now!</p>
-      <label for="first_name">First Name:</label>
-      <input type="text" id="first_name" name="first_name" oninput="this.value = this.value.toUpperCase()" required><br>
+      <img src="assets/images/icon92px.png" alt="icon" class="iconLogin">
+      <p class="formTitle">Make your voice heard. <br/>Register to SCVS now!</p>
 
-      <label for="last_name">Last Name:</label>
-      <input type="text" id="last_name" name="last_name" oninput="this.value = this.value.toUpperCase()" required><br>
+      <input type="text" placeholder="First Name" class="input" id="first_name" name="first_name" oninput="this.value = this.value.toUpperCase()" required>
+      
+      <input type="text" placeholder="Middle Name" class="input" id="middle_name" name="middle_name" oninput="this.value = this.value.toUpperCase()" required>
 
-      <label for="middle_name">Middle Name:</label>
-      <input type="text" id="middle_name" name="middle_name" oninput="this.value = this.value.toUpperCase()" required><br>
+      <input type="text" placeholder="Last Name" class="input" id="last_name" name="last_name" oninput="this.value = this.value.toUpperCase()" required>
 
-      <label for="course">Course:</label>
-      <select name="course" id="course" required>
+      <select placeholder="Course" class="input" name="course" id="course" required>
         <option value="BS INFORMATION TECHNOLOGY">BS INFORMATION TECHNOLOGY</option>
         <option value="BS COMPUTER ENGINEERING">BS COMPUTER ENGINEERING</option>
         <option value="BS ELEMENTARY EDUCATION">BS ELEMENTARY EDUCATION</option>
         <option value="BS SECONDARY EDUCATION">BS SECONDARY EDUCATION</option>
         <option value="BS ENTREPRENEURSHIP">BS ENTREPRENEURSHIP</option>
         <option value="BS BUSINESS MANAGEMENT">BS BUSINESS MANAGEMENT</option>
-      </select><br>
+      </select>
 
-      <label for="year">Year:</label>
-      <select name="year" id="year" required>
+      <select placeholder="Year" class="input" name="year" id="year" required>
         <option value="1A">1A</option>
         <option value="1B">1B</option>
         <option value="1C">1C</option>
@@ -108,24 +104,22 @@
         <option value="4B">4B</option>
         <option value="4C">4C</option>
         <option value="4D">4D</option>
-      </select><br>
+      </select>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required><br>
+      <input placeholder="Email address" class="input" type="text" name="email" required>
 
-            <!--show password checkbox-->
-            <label for="showPass" class="checkbox">
-            <input type="password" id="password" required>
-              <input type="checkbox" id="showPass" onclick="showPassword()">
-              <span class="showPass">show</span>
-            </label>
+      <!--show password checkbox-->
+      <input placeholder="Password" class="input" type="password" name="pass" required>
+      <span class="showPass">
+        <input type="checkbox" id="showPass" onclick="togglePasswordVisibility()">
+        show
+      </span>
 
-            <button id="loginBtn" type="submit">Register</button>
-                <p id="registerText">Already have an account? Login
-                    <a href="index.php" id="registerLink">here</a>.
-                </p>
-        </form>
-    <button onclick="window.location.href='index.php'">Return to login page</button>
+        <button id="loginBtn" type="submit">Register</button>
+        <p id="registerText">Already have an account? Login
+            <a href="index.php" id="registerLink">here</a>.
+        </p>
+    </form>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

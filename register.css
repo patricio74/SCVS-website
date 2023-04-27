@@ -10,19 +10,14 @@
 }
 
 body {
-    background-color: #f2f2f2;
+    background-color: #e8e8e8;
     font-size: 16px;
     scroll-behavior: smooth;
     margin: 0;
     position: relative;
     min-height: 90vh;
     font-family: 'Poppins', sans-serif;
-    
-    background-image: url('assets/images/blurred-bg.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+}
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -65,7 +60,8 @@ body {
 /* login form */
 .form {
   width: 500px;
-  background-color: #14202e;
+  background-color: #fafafa;
+  color: #14202e;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -79,7 +75,7 @@ body {
 }
 
 .formTitle{
-  color: #e8e8e8;
+  color: #14202e;
   font-size: 22px;
   text-align: center;
   font-weight: bold;
@@ -123,8 +119,8 @@ body {
   width: 100%;
   padding: 10px 20px;
   align-self: center;
-  background-color: #daa520;
-  color: #ffffff;
+  background-color: #14202e;
+  color: #f2f2f2;
   border: none;
   border-radius: 50px;
   font-size: 1.3rem;
@@ -134,12 +130,11 @@ body {
 }
 
 #loginBtn:hover {
-  background: #ddb44e;
-  color: #f2f2f2;
+  background: #183153;
+  color: #ffffff;
 }
 
 #registerText{
-  color: #f2f2f2;
   margin: 10px 0;
   font-size: 13px;
 }
@@ -211,11 +206,12 @@ body{
     width: 325px;
     margin: 6rem  auto; 
     padding: 2rem;
-    background-color: #f2f2f2;
+    background-color: #14202e;
+    color: #f2f2f2;
   }
 
   .formTitle{
-    color: #14202e;
+    color: #f2f2f2;
     font-size: 18px;
     text-align: center;
     font-weight: bold;
@@ -239,7 +235,7 @@ body{
   }
 
   #loginBtn {
-    background-color: #14202e;
+    background-color: #d8a819;
     margin-top: 5px;
     width: 100%;
     padding: 10px 20px;
@@ -247,14 +243,14 @@ body{
   }
 
   #loginBtn:hover {
-    background: #192736;
+    background: #ffbf00;
     color: #e8e8e8;
   }
 
   #registerText{
     margin-top: 5px;
     font-size: 12px;
-    color: #14202e;
+    color: #f2f2f2;
   }
   
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */

@@ -24,6 +24,19 @@ function toggleTheme() {
   }
   }
 
+  //register form password
+  function togglePasswordVisibility() {
+    var passwordInput = document.querySelector('input[name="pass"]');
+    var showPassCheckbox = document.getElementById('showPass');
+    
+    if (showPassCheckbox.checked) {
+      passwordInput.type = 'text';
+    } else {
+      passwordInput.type = 'password';
+    }
+  }
+
+
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function navbarr() {
   var x = document.getElementById("navbarr");
