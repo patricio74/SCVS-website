@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
       } else {
         // Redirect to voting page
-        header("Location: voting.php");
+        header("Location: voting.html");
         exit;
       }
   } else {
