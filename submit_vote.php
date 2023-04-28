@@ -90,7 +90,7 @@ if (mysqli_num_rows($result) > 0) {
     exit();
 } else {
     // Insert the vote into the database and update the voter's vote status
-    $query = "INSERT INTO candidates (full_name, position) 
+    $insertQuery = "INSERT INTO candidates (full_name, position) 
     VALUES ('$president', '$president_position'),
     ('$vice_president', '$vice_president_position'),
     ('$secretary', '$secretary_position'),
@@ -101,16 +101,17 @@ if (mysqli_num_rows($result) > 0) {
     ('$Second_Year_Representative', '$Second_Year_position'),
     ('$Third_Year_Representative', '$Third_Year_position'),
     ('$Fourth_Year_Representative', '$Fourth_Year_position')";
-
-    $query = "UPDATE voters SET votestatus = 'voted' WHERE email = '$email'";
-    if (mysqli_query($conn, $query)) {
+    
+    $updateQuery = "UPDATE voters SET votestatus = 'voted' WHERE email = '$email'";
+    
+    if (mysqli_query($conn, $insertQuery) && mysqli_query($conn, $updateQuery)) {
         // Success message and redirection
-        header("Location: vote_success.html");
+        echo "<script>window.location.href='vote_success.html';</script>";
         exit;
     } else {
         echo "<script>alert('Error submitting your vote!');</script>";
         echo "<script>window.location.href='index.php';</script>";
-    }
+    }    
 }
 mysqli_close($conn);
 ?>

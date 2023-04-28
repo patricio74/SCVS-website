@@ -43,11 +43,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Display error message and return to login page button
         //echo "<p>You have already voted and cannot vote again. <br/> click the button below to logout and return to login page.</p>";
         //echo "<form action='logout.php'><button type='submit'>Logout</button></form>";
-        header("Location: errr.html");
+        echo "<script>window.location.href = 'errr.html';</script>";
         exit;
       } else {
         // Redirect to voting page
-        header("Location: voting.html");
+        echo "<script>window.location.href = 'voting.html';</script>";
         exit;
       }
   } else {
