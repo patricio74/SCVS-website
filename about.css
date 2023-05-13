@@ -43,7 +43,7 @@
     
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #e8e8e8;
+    background-color: #f5f5f5;
     color: #14202e;
     font-size: 16px;
     scroll-behavior: smooth;
@@ -53,7 +53,6 @@ body {
 
 .light-bg{
     color: #14202e;
-    background-color: #e8e8e8;
     left: 0;
     top: 0;
     width: 100%;

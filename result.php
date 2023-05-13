@@ -50,7 +50,7 @@ $result = mysqli_query($conn, $sql);
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
-            <p class="page-title">Vote result as of <span style="color: #daa520;"><?php date_default_timezone_set('Asia/Manila');
+            <p class="page-title">Election result as of <span style="color: #daa520;"><?php date_default_timezone_set('Asia/Manila');
             echo date("g:i a");?>
             </p></span>
 <!--<br>
