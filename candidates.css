@@ -39,6 +39,24 @@
   td{
     text-align: left;
   }
+
+#printButton {
+  position: absolute;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 12px;
+  font-weight: bold;
+  background-color: #daa520;
+  color: #14202e;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+}
+#printButton:hover {
+  border-radius: 50px;
+  background-color: #ffbf00;
+  color: #183153;
+}
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f5f5f5;
@@ -176,4 +194,9 @@ html {
       padding: 25px 40px;
       font-size: 15px;
   }
+  #printButton {
+    padding: 5px 7px;
+    top: 20px;
+    right: 100px;
   }
+}

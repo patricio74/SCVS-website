@@ -46,3 +46,11 @@ function navbarr() {
     x.className = "topnav";
   }
 }
+
+/* result page print button*/
+function printPage() {
+  var style = document.createElement('style');
+  style.innerHTML = '@page { size: landscape; }';
+  document.head.appendChild(style);
+  window.print();
+}
