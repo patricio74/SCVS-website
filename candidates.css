@@ -83,6 +83,7 @@ html {
     font-size: 36px;
     padding: 10px 60px;
     font-weight: bold;
+    color: #14202e;
 }
 
 .page-description{
@@ -121,7 +122,7 @@ html {
     color: #ffbf00;
   }
   h3{
-    color: #152d49;
+    color: #14202e;
     padding-top: 25px;
   }
   .card {

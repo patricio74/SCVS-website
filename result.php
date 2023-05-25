@@ -2,29 +2,7 @@
     Perez, John Patrick A.
     BSIT-3F
 -->
-<?php
-// Connect to database
-$servername = "db4free.net";
-$username = "patricc";
-$password = "votingsystem";
-$dbname = "voting_system";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-// Query to retrieve vote count, candidate name, and position from database
-$sql = "SELECT COUNT(*) AS vote_count, full_name, position FROM candidates 
-        GROUP BY full_name, position 
-        ORDER BY FIELD(position, 'President', 'Vice President', 'Secretary', 'Treasurer',
-         'Auditor', 'Public Relations Officer', '1st yr representative', '2nd yr representative',
-          '3rd yr representative', '4th yr representative') ASC, 
-            FIELD(position, 'President') DESC,
-                position ASC,
-                full_name ASC";
-$result = mysqli_query($conn, $sql);
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,42 +36,66 @@ $result = mysqli_query($conn, $sql);
 <!--<br>
             <p class="page-description">Voting result will be posted here after the election.</p>
 -->
-            <?php
-            // Create separate tables for each position
-            $positions = array(); // Array to store unique positions
+<?php
+    try{
+        $servername = "db4free.net";
+        $username = "scvsystem";
+        $password = "scvsystemprz23";
+        $dbname = "scvs_perez";
+        $conn = new mysqli($servername, $username, $password, $dbname);
 
-            // Group results by position
-            while ($row = mysqli_fetch_assoc($result)) {
-                $position = $row['position'];
-                $positions[$position][] = $row;
-            }
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        //Array to hold the positions in the desired order
+        $positions = array(
+            "President", 
+            "Vice President", 
+            "Secretary", 
+            "Treasurer", 
+            "Auditor", 
+            "Public Relations Officer", 
+            "First year representative", 
+            "Second year representative", 
+            "Third year representative", 
+            "Fourth year representative"
+        );
 
-            // Generate tables for each position
-            foreach ($positions as $position => $candidates) {
-                echo '<h3>' . $position . '</h3>';
-                echo '<table>';
-                echo '<tr>
-                        <th>Votes</th>
-                        <th>Candidate</th>
-                        <th>Position</th>
-                    </tr>';
+        // Iterate over each position and display the corresponding table
+        foreach ($positions as $position) {
+            echo "<h3>$position</h3>";
+            echo "<table>";
+            echo "<tr><th>Candidate name</th><th>Vote count</th></tr>";
 
-                foreach ($candidates as $candidate) {
-                    echo '<tr>
-                            <td>' . $candidate['vote_count'] . '</td>
-                            <td>' . $candidate['full_name'] . '</td>
-                            <td>' . $candidate['position'] . '</td>
-                        </tr>';
+            $sql = "SELECT candidate.candid_name, COUNT(vote.vote_id) AS vote_count
+                    FROM candidate
+                    LEFT JOIN vote ON candidate.candid_id = vote.candid_id
+                    WHERE candidate.candid_position = '$position'
+                    GROUP BY candidate.candid_name";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $voteCount = $row["vote_count"];
+                    $candidateName = $row["candid_name"];
+
+                    echo "<tr><td>$candidateName</td><td>$voteCount</td></tr>";
                 }
-
-                echo '</table>';
+            } else {
+                echo "<tr><td colspan='2'>No data available</td></tr>";
             }
-            ?>
+
+            echo "</table>";
+        }
+
+        $conn->close();
+    } catch (mysqli_sql_exception $e) {
+        // Catch the exception and display a custom error message
+        $errorMessage = "An error occurred while connecting to the database. Please try again later.";
+        echo $errorMessage;
+    }
+    ?>
         <p style="min-height: 5vh;"></p>
         <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
-<?php
-// Close database connection
-mysqli_close($conn);
-?>
