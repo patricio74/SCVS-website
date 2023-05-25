@@ -79,12 +79,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
         <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
         <div class="topnav" id="navbarr">
             <a href="index.php" class="active">SCVS</a>
-            <a href="candidates.html">Candidates</a>
+            <a href="candidates.php">Candidates</a>
             <a href="result.php">Result</a>
             <a href="about.html">About</a>
             <a href="javascript:void(0);" class="icon" onclick="navbarr()">

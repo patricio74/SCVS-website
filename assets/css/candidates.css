@@ -19,16 +19,20 @@
   .topnav a:hover {
     background-color: #183153;
     color: #f2f2f2;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #ffbf00;
   }
   
   /* Add an active class to highlight the current page */
   .topnav a.active {
     color: #ffbf00;
     font-weight: bold;
+    text-decoration: none;
   }
   
   .topnav a.active:hover {
-    color: #f2f2f2;
+    background-color: #14202e;
   }
   
   /* Hide the link that should open and close the topnav on small screens */
@@ -37,7 +41,7 @@
   }
   
   td{
-    text-align: left;
+    text-align: center;
   }
 
 #printButton {
@@ -152,7 +156,7 @@ html {
   table {
     background-color: #ffffff;
     margin: 0 auto; /* Center the table horizontally */
-    width: 70%; /* Adjust the width as desired */
+    width: 50%; /* Adjust the width as desired */
     border-collapse: collapse; /* Collapse table borders */
   }
 

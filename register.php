@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
         <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="register.css">
+        <link rel="stylesheet" href="./assets/css/register.css">
 </head>
 <body>
     <?php
@@ -60,7 +60,7 @@
     ?>
     <div class="topnav" id="navbarr">
         <a href="index.php" class="active">SCVS</a>
-        <a href="candidates.html">Candidates</a>
+        <a href="candidates.php">Candidates</a>
         <a href="result.php">Result</a>
         <a href="about.html">About</a>
         <a href="javascript:void(0);" class="icon" onclick="navbarr()">
@@ -70,7 +70,8 @@
     <!--login form-->
     <form class="form" method="post">
       <img src="assets/images/icon92px.png" alt="icon" class="iconLogin">
-      <p class="formTitle">Make your voice heard. <br/>Register to SCVS now!</p>
+      <p style="text-align: center;">Make your voice heard.</p>
+      <p class="formTitle">Register to SCVS now!</p>
 
       <input type="text" placeholder="First Name" class="input" id="first_name" name="first_name" oninput="this.value = this.value.toUpperCase()" required>
       

@@ -10,14 +10,20 @@
 }
 
 body {
-    background-color: #e8e8e8;
+    background-color: #f5f5f5;
     font-size: 16px;
     scroll-behavior: smooth;
     margin: 0;
     position: relative;
     min-height: 90vh;
     font-family: 'Poppins', sans-serif;
-}
+    
+   /* background-image: url('assets/images/blurred-bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    */
+  }
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -36,21 +42,25 @@ body {
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #183153;
-  color: #f2f2f2;
-}
-
-/* Add an active class to highlight the current page */
-.topnav a.active {
-  color: #ffbf00;
-  font-weight: bold;
-}
-
-.topnav a.active:hover {
-  color: #f2f2f2;
-}
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #183153;
+    color: #f2f2f2;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #ffbf00;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    color: #ffbf00;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .topnav a.active:hover {
+    background-color: #14202e;
+  }
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
@@ -60,8 +70,7 @@ body {
 /* login form */
 .form {
   width: 500px;
-  background-color: #fafafa;
-  color: #14202e;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -71,7 +80,7 @@ body {
   font-family: inherit;
   margin:  10vh auto; 
   padding: 3rem;
-  
+  color: #14202e;
 }
 
 .formTitle{
@@ -90,7 +99,7 @@ body {
 }
 
 .input {
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   font-size: 18px;
   padding: 15px 10px;
   border-radius: 5px;
@@ -107,7 +116,7 @@ body {
 
 .checkbox{
   font-size: 14px;
-  color: #f2f2f2;
+  color: #14202e;
   cursor: pointer;
 }
 
@@ -122,7 +131,7 @@ body {
   background-color: #14202e;
   color: #f2f2f2;
   border: none;
-  border-radius: 50px;
+  border-radius: 7px;
   font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
@@ -130,11 +139,12 @@ body {
 }
 
 #loginBtn:hover {
-  background: #183153;
-  color: #ffffff;
+  border-radius: 50px;
+  color: #daa520;
 }
 
 #registerText{
+  color: #14202e;
   margin: 10px 0;
   font-size: 13px;
 }
@@ -198,20 +208,15 @@ body {
   text-align: center;
   opacity: 94%;
 }
-body{
-  background-image: none;
-  background-color: #e8e8e8;
-}
+
   .form {
-    width: 325px;
+    width: 80vw;
     margin: 6rem  auto; 
     padding: 2rem;
-    background-color: #14202e;
-    color: #f2f2f2;
   }
 
   .formTitle{
-    color: #f2f2f2;
+    color: #14202e;
     font-size: 18px;
     text-align: center;
     font-weight: bold;
@@ -235,22 +240,17 @@ body{
   }
 
   #loginBtn {
-    background-color: #d8a819;
+    background-color: #14202e;
     margin-top: 5px;
     width: 100%;
     padding: 10px 20px;
     font-size: 1rem;
   }
 
-  #loginBtn:hover {
-    background: #ffbf00;
-    color: #e8e8e8;
-  }
-
   #registerText{
     margin-top: 5px;
     font-size: 12px;
-    color: #f2f2f2;
+    color: #14202e;
   }
   
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */

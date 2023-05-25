@@ -16,12 +16,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
         <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="candidates.css">
+        <link rel="stylesheet" href="./assets/css/candidates.css">
     </head>
     <body>
         <div class="topnav" id="navbarr">
                 <a href="index.php" class="active">SCVS</a>
-                <a href="candidates.html">Candidates</a>
+                <a href="candidates.php">Candidates</a>
           		  <a href="result.php">Result</a>
           		  <a href="about.html">About</a>
                 <a href="javascript:void(0);" class="icon" onclick="navbarr()">
@@ -29,13 +29,11 @@
                 </a>
             </div>
             <button id="printButton" onclick="printPage()">PRINT</button>
-
-            <p class="page-title">Election result as of <span style="color: #daa520;"><?php date_default_timezone_set('Asia/Manila');
+            <p style="min-height: 5vh;"></p>
+            <h1 class="page-title">Election result as of <span style="color: #daa520;"><?php date_default_timezone_set('Asia/Manila');
             echo date("g:i a");?>
-            </p></span>
-<!--<br>
-            <p class="page-description">Voting result will be posted here after the election.</p>
--->
+            </h1></span>
+
 <?php
     try{
         $servername = "db4free.net";
@@ -49,16 +47,16 @@
         }
         //Array to hold the positions in the desired order
         $positions = array(
-            "President", 
-            "Vice President", 
-            "Secretary", 
-            "Treasurer", 
-            "Auditor", 
-            "Public Relations Officer", 
-            "First year representative", 
-            "Second year representative", 
-            "Third year representative", 
-            "Fourth year representative"
+            "PRESIDENT",
+            "VICE PRESIDENT",
+            "SECRETARY",
+            "TREASURER",
+            "AUDITOR",
+            "PUBLIC RELATIONS OFFICER",
+            "FIRST YEAR REPRESENTATIVE",
+            "SECOND YEAR REPRESENTATIVE",
+            "THIRD YEAR REPRESENTATIVE",
+            "FOURTH YEAR REPRESENTATIVE"
         );
 
         // Iterate over each position and display the corresponding table

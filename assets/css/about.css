@@ -24,16 +24,20 @@
   .topnav a:hover {
     background-color: #183153;
     color: #f2f2f2;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #ffbf00;
   }
   
   /* Add an active class to highlight the current page */
   .topnav a.active {
     color: #ffbf00;
     font-weight: bold;
+    text-decoration: none;
   }
   
   .topnav a.active:hover {
-    color: #f2f2f2;
+    background-color: #14202e;
   }
   
   /* Hide the link that should open and close the topnav on small screens */

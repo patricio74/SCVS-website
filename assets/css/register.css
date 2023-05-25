@@ -10,20 +10,14 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #e8e8e8;
     font-size: 16px;
     scroll-behavior: smooth;
     margin: 0;
     position: relative;
     min-height: 90vh;
     font-family: 'Poppins', sans-serif;
-    
-   /* background-image: url('assets/images/blurred-bg.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    */
-  }
+}
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -42,42 +36,45 @@ body {
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #183153;
-  color: #f2f2f2;
-}
-
-/* Add an active class to highlight the current page */
-.topnav a.active {
-  color: #ffbf00;
-  font-weight: bold;
-}
-
-.topnav a.active:hover {
-  color: #f2f2f2;
-}
-
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #183153;
+    color: #f2f2f2;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #ffbf00;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    color: #ffbf00;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .topnav a.active:hover {
+    background-color: #14202e;
+  }
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
 }
 
-/* login form */
+/* register form */
 .form {
-  width: 500px;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 30px 40px;
-  box-shadow: 0 0 5px #00000033;
-  border-radius: 25px;
-  font-family: inherit;
-  margin:  10vh auto; 
-  padding: 3rem;
-  color: #14202e;
-}
+    width: 500px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 40px;
+    box-shadow: 0 0 5px #00000033;
+    border-radius: 25px;
+    font-family: inherit;
+    margin:  10vh auto; 
+    padding: 3rem;
+    color: #14202e;
+  }
 
 .formTitle{
   color: #14202e;
@@ -112,7 +109,7 @@ body {
 
 .checkbox{
   font-size: 14px;
-  color: #14202e;
+  color: #f2f2f2;
   cursor: pointer;
 }
 
@@ -138,9 +135,7 @@ body {
   border-radius: 50px;
   color: #daa520;
 }
-
 #registerText{
-  color: #14202e;
   margin: 10px 0;
   font-size: 13px;
 }
@@ -204,7 +199,10 @@ body {
   text-align: center;
   opacity: 94%;
 }
-
+body{
+  background-image: none;
+  background-color: #e8e8e8;
+}
   .form {
     width: 80vw;
     margin: 6rem  auto; 
@@ -241,6 +239,11 @@ body {
     width: 100%;
     padding: 10px 20px;
     font-size: 1rem;
+  }
+
+  #loginBtn:hover {
+    border-radius: 50px;
+    color: #daa520;
   }
 
   #registerText{
