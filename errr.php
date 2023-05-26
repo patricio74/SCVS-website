@@ -18,7 +18,7 @@
 <body>
     <div>
         <h1>You have already voted and cannot vote again.</h1>
-        <p>Click logout to view the result instead.</p>
+        <p>Click logout and view the result instead.</p>
         <div class="button-container">
             <button id="logoutBtn" onclick="location.href='logout.php'">Logout</button>
         </div>

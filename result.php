@@ -23,76 +23,75 @@
                 <a href="index.php" class="active">SCVS</a>
                 <a href="candidates.php">Candidates</a>
           		  <a href="result.php">Result</a>
-          		  <a href="about.html">About</a>
+                    <a href="about.php">About</a>
                 <a href="javascript:void(0);" class="icon" onclick="navbarr()">
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
             <button id="printButton" onclick="printPage()">PRINT</button>
-            <p style="min-height: 5vh;"></p>
+            <p style="min-height: 3vh;"></p>
             <h1 class="page-title">Election result as of <span style="color: #daa520;"><?php date_default_timezone_set('Asia/Manila');
             echo date("g:i a");?>
             </h1></span>
 
-<?php
-    try{
-        $servername = "db4free.net";
-        $username = "scvsystem";
-        $password = "scvsystemprz23";
-        $dbname = "scvs_perez";
-        $conn = new mysqli($servername, $username, $password, $dbname);
+    <?php
+        try{
+            $servername = "db4free.net";
+            $username = "scvsystem";
+            $password = "scvsystemprz23";
+            $dbname = "scvs_perez";
+            $conn = new mysqli($servername, $username, $password, $dbname);
 
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        //Array to hold the positions in the desired order
-        $positions = array(
-            "PRESIDENT",
-            "VICE PRESIDENT",
-            "SECRETARY",
-            "TREASURER",
-            "AUDITOR",
-            "PUBLIC RELATIONS OFFICER",
-            "FIRST YEAR REPRESENTATIVE",
-            "SECOND YEAR REPRESENTATIVE",
-            "THIRD YEAR REPRESENTATIVE",
-            "FOURTH YEAR REPRESENTATIVE"
-        );
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+            //Array to hold the positions in the desired order
+            $positions = array(
+                "PRESIDENT",
+                "VICE PRESIDENT",
+                "SECRETARY",
+                "TREASURER",
+                "AUDITOR",
+                "PUBLIC RELATIONS OFFICER",
+                "FIRST YEAR REPRESENTATIVE",
+                "SECOND YEAR REPRESENTATIVE",
+                "THIRD YEAR REPRESENTATIVE",
+                "FOURTH YEAR REPRESENTATIVE"
+            );
 
-        // Iterate over each position and display the corresponding table
-        foreach ($positions as $position) {
-            echo "<h3>$position</h3>";
-            echo "<table>";
-            echo "<tr><th>Candidate name</th><th>Vote count</th></tr>";
+            // Iterate over each position and display the corresponding table
+            foreach ($positions as $position) {
+                echo "<h3>$position</h3>";
+                echo "<table>";
+                echo "<tr><th>Candidate name</th><th>Vote count</th></tr>";
 
-            $sql = "SELECT candidate.candid_name, COUNT(vote.vote_id) AS vote_count
-                    FROM candidate
-                    LEFT JOIN vote ON candidate.candid_id = vote.candid_id
-                    WHERE candidate.candid_position = '$position'
-                    GROUP BY candidate.candid_name";
-            $result = $conn->query($sql);
+                $sql = "SELECT candidate.candid_name, COUNT(vote.vote_id) AS vote_count
+                        FROM candidate
+                        LEFT JOIN vote ON candidate.candid_id = vote.candid_id
+                        WHERE candidate.candid_position = '$position'
+                        GROUP BY candidate.candid_name";
+                $result = $conn->query($sql);
 
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    $voteCount = $row["vote_count"];
-                    $candidateName = $row["candid_name"];
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $voteCount = $row["vote_count"];
+                        $candidateName = $row["candid_name"];
 
-                    echo "<tr><td>$candidateName</td><td>$voteCount</td></tr>";
+                        echo "<tr><td>$candidateName</td><td>$voteCount</td></tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='2'>No data available</td></tr>";
                 }
-            } else {
-                echo "<tr><td colspan='2'>No data available</td></tr>";
+
+                echo "</table>";
             }
 
-            echo "</table>";
+            $conn->close();
+        } catch (mysqli_sql_exception $e) {
+            $errorMessage = "An error occurred while connecting to the database. Please try again later.";
+            echo $errorMessage;
         }
-
-        $conn->close();
-    } catch (mysqli_sql_exception $e) {
-        // Catch the exception and display a custom error message
-        $errorMessage = "An error occurred while connecting to the database. Please try again later.";
-        echo $errorMessage;
-    }
-    ?>
+        ?>
         <p style="min-height: 5vh;"></p>
         <script type="text/javascript" src="script.js"></script>
     </body>

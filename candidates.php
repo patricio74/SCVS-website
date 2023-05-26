@@ -13,7 +13,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <!-- Load hamburger icon kapag nasa mobile -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./assets/css/candidates.css">
     </head>
@@ -22,13 +22,13 @@
                 <a href="index.php" class="active">SCVS</a>
                 <a href="candidates.php">Candidates</a>
            		 <a href="result.php">Result</a>
-            	<a href="about.html">About</a>
+            	<a href="about.php">About</a>
                 <a href="javascript:void(0);" class="icon" onclick="navbarr()">
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
             <button id="printButton" onclick="printPage()">PRINT</button>
-            <p style="min-height: 5vh;"></p>
+            <p style="min-height: 3vh;"></p>
             <h1 class="page-title">Student Council Candidates</h1>            
         <?php
             $servername = "db4free.net";

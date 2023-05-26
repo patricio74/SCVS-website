@@ -13,15 +13,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <!-- Load hamburger icon kapag nasa mobile -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./assets/css/register.css">
 </head>
 <body>
-    <?php
-    // Check if the form has been submitted
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      // Retrieve the form data from $_POST array
+  <?php
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $first_name = $_POST['first_name'];
       $last_name = $_POST['last_name'];
       $middle_name = $_POST['middle_name'];
@@ -29,48 +27,48 @@
       $year = $_POST['year'];
       $email = $_POST['email'];
       $pass = $_POST['pass'];
+      $phone_number = $_POST['phone_number'];
 
-      // Connect to the database
       $servername = "db4free.net";
-      $username = "patricc";
-      $password = "votingsystem";
-      $dbname = "voting_system";
+      $username = "scvsystem";
+      $password = "scvsystemprz23";
+      $dbname = "scvs_perez";
 
-      $conn = new mysqli($servername, $username, $password, $dbname);
+      try {
+          $conn = new mysqli($servername, $username, $password, $dbname);
 
-      // Check connection
-      if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+          if ($conn->connect_error) {
+              throw new Exception("Connection failed: " . $conn->connect_error);
+          }
+
+          $sql = "INSERT INTO student (firstname, lastname, middlename, course, yrsec, email, pword, phone_number)
+                  VALUES ('$first_name', '$last_name', '$middle_name', '$course', '$year', '$email', '$pass', '$phone_number')";
+
+          if ($conn->query($sql) === TRUE) {
+              echo "New voter created successfully!";
+          } else {
+              throw new Exception("Error: " . $sql . "<br>" . $conn->error);
+          }
+
+          $conn->close();
+      } catch (Exception $e) {
+          echo "Error: " . $e->getMessage();
       }
-
-      // Prepare the SQL query
-      $sql = "INSERT INTO voters (First_name, Last_name, Middle_name, Course, Yr, Email, Pass)
-              VALUES ('$first_name', '$last_name', '$middle_name', '$course', '$year', '$email', '$pass')";
-
-      // Execute the query
-      if ($conn->query($sql) === TRUE) {
-        echo "New voter created successfully";
-      } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-      }
-
-      // Close the database connection
-      $conn->close();
-    }
-    ?>
+  }
+  ?>
     <div class="topnav" id="navbarr">
         <a href="index.php" class="active">SCVS</a>
         <a href="candidates.php">Candidates</a>
         <a href="result.php">Result</a>
-        <a href="about.html">About</a>
+        <a href="about.php">About</a>
         <a href="javascript:void(0);" class="icon" onclick="navbarr()">
             <i class="fa fa-bars"></i>
         </a>
     </div>    
-    <!--login form-->
+    <!--reg form-->
     <form class="form" method="post">
       <img src="assets/images/icon92px.png" alt="icon" class="iconLogin">
-      <p style="text-align: center;">Make your voice heard.</p>
+      <!--<p style="text-align: center;">Make your voice heard.</p>-->
       <p class="formTitle">Register to SCVS now!</p>
 
       <input type="text" placeholder="First Name" class="input" id="first_name" name="first_name" oninput="this.value = this.value.toUpperCase()" required>
@@ -107,20 +105,22 @@
         <option value="4D">4D</option>
       </select>
 
+      <input placeholder="Phone number (+639081231234)" class="input" name="phone_number" pattern="(\+[0-9]{1,3})?[0-9]{10,12}" maxlength="13" required>
+
       <input placeholder="Email address" class="input" type="text" name="email" required>
 
       <!--show password checkbox-->
-      <input placeholder="Password" class="input" type="password" name="pass" required>
-      <span class="showPass">
-        <input type="checkbox" id="showPass" onclick="togglePasswordVisibility()">
-        show
+      <input placeholder="Password" class="input" type="password" name="password" required>
+      <span class="chckbox" onclick="togglePasswordVisibility()">
+        <input type="checkbox" id="showPass">
+        <label for="showPass">show</label>
       </span>
-
-        <button id="loginBtn" type="submit">Register</button>
+        <button id="regBtn" type="submit">Register</button>
         <p id="registerText">Already have an account? Login
             <a href="index.php" id="registerLink">here</a>.
         </p>
     </form>
+    <p style="min-height: 10vh;"></p>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

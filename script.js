@@ -10,31 +10,17 @@ function toggleTheme() {
  }
 */
 
-//pangview ng password
- function showPassword() {
-  var passwordField = document.getElementById("password");
-  var showButton = document.querySelector("#pass + button");
+//rview password
+function togglePasswordVisibility() {
+  var passwordInput = document.querySelector('input[name="password"]');
+  var showPassCheckbox = document.getElementById('showPass');
 
-  if (passwordField.type === "password") {
-    passwordField.type = "text";
-    showButton.textContent = "Hide";
+  if (showPassCheckbox.checked) {
+    passwordInput.type = 'text';
   } else {
-    passwordField.type = "password";
-    showButton.textContent = "Show";
+    passwordInput.type = 'password';
   }
-  }
-
-  //register form password
-  function togglePasswordVisibility() {
-    var passwordInput = document.querySelector('input[name="pass"]');
-    var showPassCheckbox = document.getElementById('showPass');
-    
-    if (showPassCheckbox.checked) {
-      passwordInput.type = 'text';
-    } else {
-      passwordInput.type = 'password';
-    }
-  }
+}
 
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */

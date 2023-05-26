@@ -1,8 +1,7 @@
 <?php
-session_start(); // start the session
-session_destroy(); // destroy all data registered to a session
+session_start();
+session_destroy(); // delete cookiez
 
-// redirect to the login page
 header('Location: index.php');
 exit;
 ?>

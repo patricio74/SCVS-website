@@ -13,7 +13,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <!-- Load hamburger icon kapag nasa mobile -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./assets/css/about.css">
     </head>
@@ -22,7 +22,7 @@
             <a href="index.php" class="active">SCVS</a>
             <a href="candidates.php">Candidates</a>
             <a href="result.php">Result</a>
-            <a href="about.html">About</a>
+            <a href="about.php">About</a>
             <a href="javascript:void(0);" class="icon" onclick="navbarr()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -33,9 +33,8 @@
                     Student Council Voting System
                 </p>
                 <p class="page-description">This website is part of the Automated Student Council Voting System developed by a group of third-year BSIT students from Colegio de Montalban. 
-                    SCVS is created to replace the traditional pen and paper style of voting to allow the students to cast their votes using their preferred device whenever and wherever they are.
                    <br><br>Join us as we make a positive impact on our campus and empower our student body. 
-                    Happy voting!</p><br>
+                   <span style="color: #daa520;font-weight:bold;">Happy voting</span>!</p><br>
                 <p class="members">
                     Group 5 members:
                 </p>
@@ -48,32 +47,44 @@
                         <!--<span style="color: #f2f2f2;font-size: 1.4rem;">&gt;</span>
                         -->
                     </p>
-                <!--<p class="ctext">"There is no secret ingredient. <br> It's just you."<br><br>
-                </p>-->
+                    <div class="icons">
+                        <a href="https://www.facebook.com/duweypi" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="https://pj-zerep.netlify.app/" target="_blank"><ion-icon name="link"></ion-icon></a>
+                        <a href="mailto: jpperez077@tutanota.de" target="_blank"><ion-icon name="send"></ion-icon></a>
+                    </div>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
                     <img src="assets/images/pic2.png" alt="profile-pic" class="profile-pic">
                     <p class="cname">MARTISANO, JAVE</p>
-                <!--<p class="ctext">If you only do what you can do, you will never be more than you are now.
-                </p>-->
+                    <div class="icons">
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="link"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="send"></ion-icon></a>
+                    </div>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
                     <img src="assets/images/pic3.png" alt="profile-pic" class="profile-pic">
                     <p class="cname">ROLDAN, JAY HAROLD</p>
-                <!--<p class="ctext">You can chain my body, but you will never chain my warrior spirit! <br><br>
-                </p>-->
+                    <div class="icons">
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="link"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="send"></ion-icon></a>
+                    </div>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
                     <img src="assets/images/pic4.png" alt="profile-pic" class="profile-pic">
                     <p class="cname">ASURTO, LIEZEL</p>
-                <!--<p class="ctext">I don't need to bite to fight! <br><br><br>
-                </p>-->
+                    <div class="icons">
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="link"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="send"></ion-icon></a>
+                    </div>
                 </div>
             </div>
 
@@ -81,8 +92,11 @@
                 <div class="card">
                     <img src="assets/images/pic5.png" alt="profile-pic" class="profile-pic">
                     <p class="cname">CAROLINO, HAZELLE</p>
-                <!--<p class="ctext">That was pretty hardcore. <br><br><br>
-                </p>-->
+                    <div class="icons">
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="link"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="send"></ion-icon></a>
+                    </div>
                 </div>
             </div>
             </div>
@@ -90,6 +104,8 @@
         <footer>
             <p>&copy; 2023 created by Perez, J.P.</p>
         </footer>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script type="text/javascript" src="script.js"></script>
     </body>
 </html>

@@ -4,58 +4,52 @@
 */
 
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #e8e8e8;
-    font-size: 16px;
-    scroll-behavior: smooth;
-    margin: 0;
-    position: relative;
-    min-height: 90vh;
-    font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  margin: 0;
+  position: relative;
+  min-height: 90vh;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Add a black background color to the top navigation */
 .topnav {
-  overflow: hidden;
+overflow: hidden;
+background-color: #14202e;
+}
+
+.topnav a {
+float: left;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 20px 38px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #183153;
+  color: #f2f2f2;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #daa520;
+}
+
+.topnav a.active {
+  color: #ffbf00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.topnav a.active:hover {
   background-color: #14202e;
 }
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 20px 38px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #183153;
-    color: #f2f2f2;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: #ffbf00;
-  }
-  
-  /* Add an active class to highlight the current page */
-  .topnav a.active {
-    color: #ffbf00;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .topnav a.active:hover {
-    background-color: #14202e;
-  }
-/* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
 }
@@ -104,12 +98,12 @@ body {
 }
 
 .input:focus {
-  outline: 1.2px solid #ffbf00;
+  outline: 2px solid #daa520;
 }
 
-.checkbox{
-  font-size: 14px;
-  color: #f2f2f2;
+.chckbox{
+  font-size: 16px;
+  color: #14202e;
   cursor: pointer;
 }
 
@@ -117,9 +111,9 @@ body {
   accent-color: #14202e;
 }
 
-#loginBtn {
-  width: 100%;
-  padding: 10px 20px;
+#regBtn {
+  width: 45%;
+  padding: 15px 20px;
   align-self: center;
   background-color: #14202e;
   color: #f2f2f2;
@@ -131,7 +125,7 @@ body {
   margin-top: 10px;
 }
 
-#loginBtn:hover {
+#regBtn:hover {
   border-radius: 50px;
   color: #daa520;
 }
@@ -149,7 +143,6 @@ body {
   color: #ffbf00;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -157,13 +150,11 @@ body {
     display: block;
   }
 
-  /* Add a black background color to the top navigation */
 .topnav {
   background-color: #14202e;
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
   float: left;
   display: block;
@@ -174,12 +165,10 @@ body {
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
   color: #f2f2f2;
 }
 
-/* Add an active class to highlight the current page */
 .topnav a.active {
   color: #ffbf00;
 }
@@ -188,7 +177,6 @@ body {
   color: #f2f2f2;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
   color: #f2f2f2;
@@ -201,58 +189,51 @@ body {
 }
 body{
   background-image: none;
-  background-color: #e8e8e8;
 }
-  .form {
-    width: 80vw;
-    margin: 6rem  auto; 
-    padding: 2rem;
-  }
+.form {
+  width: 80vw;
+  margin: 3rem  auto; 
+  padding: 2rem;
+}
 
-  .formTitle{
-    color: #14202e;
-    font-size: 18px;
-    text-align: center;
-    font-weight: bold;
-  }
+.formTitle{
+  color: #14202e;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
 
-  .iconLogin{
-    height: auto;
-    width: 60px;
-  }
+.iconLogin{
+  height: auto;
+  width: 60px;
+}
 
-  .input {
-    font-size: 14px;
-    padding: 10px 5px;
-    border-radius: 5px;
-    margin-top: 5px;
-  }
+.input {
+  font-size: 14px;
+  padding: 10px 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
 
-  .checkbox{
-    font-size: 12px;
-    color: #14202e;
-  }
+.chckbox{
+  font-size: 12px;
+}
 
-  #loginBtn {
-    background-color: #14202e;
-    margin-top: 5px;
-    width: 100%;
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
+#regBtn {
+  margin-top: 5px;
+  font-size: 1rem;
+}
 
-  #loginBtn:hover {
-    border-radius: 50px;
-    color: #daa520;
-  }
+#regBtn:hover {
+  border-radius: 50px;
+  color: #daa520;
+}
 
-  #registerText{
-    margin-top: 5px;
-    font-size: 12px;
-    color: #14202e;
-  }
-  
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+#registerText{
+  margin-top: 5px;
+  font-size: 12px;
+  color: #14202e;
+}
 @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
