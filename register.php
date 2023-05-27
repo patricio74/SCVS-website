@@ -45,7 +45,7 @@
                   VALUES ('$first_name', '$last_name', '$middle_name', '$course', '$year', '$email', '$pass', '$phone_number')";
 
           if ($conn->query($sql) === TRUE) {
-            header("Location: reg_success.php");
+            echo "<script>window.location.href = 'reg_success.php';</script>";
             exit();
         } else {
               throw new Exception("Error: " . $sql . "<br>" . $conn->error);

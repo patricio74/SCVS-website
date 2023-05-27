@@ -34,7 +34,7 @@
                 </p>
                 <p class="page-description">This website is part of the Automated Student Council Voting System developed by a group of third-year BSIT students from Colegio de Montalban. 
                    <br><br>Join us as we make a positive impact on our campus and empower our student body. <br><br>
-                Click <a href="https://drive.google.com/file/d/1n98Y6deVRWQCxecAX6BpJi_McHbMJvZv/view?usp=sharing" target="_blank">here</a> to download 
+                Click <a href="https://drive.google.com/drive/folders/1FsFWPsm11TycV46mElU7gWC-ueRY3mku?usp=sharing" target="_blank">here</a> to download 
                    <span style="color: #daa520;font-weight:bold;">SCVS</span> desktop app.<br></p>
                 <p class="members">
                     Group 5 members:
