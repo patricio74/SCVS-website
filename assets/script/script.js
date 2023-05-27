@@ -10,7 +10,7 @@ function toggleTheme() {
  }
 */
 
-//rview password
+//view login password
 function togglePasswordVisibility() {
   var passwordInput = document.querySelector('input[name="password"]');
   var showPassCheckbox = document.getElementById('showPass');
@@ -22,6 +22,17 @@ function togglePasswordVisibility() {
   }
 }
 
+//regform pass
+function toggleRegPass() {
+  var passwordInput = document.getElementsByName("pass")[0];
+  var showPasswordCheckbox = document.getElementById("showPass");
+
+  if (showPasswordCheckbox.checked) {
+    passwordInput.type = "text";
+  } else {
+    passwordInput.type = "password";
+  }
+}
 
 // Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon
 function navbarr() {
