@@ -1,7 +1,3 @@
-<!--
-    Perez, John Patrick A.
-    BSIT-3F
--->
 <?php
 session_start();
 
@@ -49,7 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $conn->close();
 }
 ?>
-
+<!--
+    Perez, John Patrick A.
+    BSIT-3F
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
