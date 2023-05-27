@@ -25,11 +25,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $result = $stmt->get_result();
   
   if ($result->num_rows === 1) {
-    $_SESSION['student'] = $result->fetch_assoc();
-    $_SESSION['email'] = $_SESSION['student']['email'];
-  
+    $row = $result->fetch_assoc();
+    $_SESSION['student'] = $row;
+    $_SESSION['email'] = $row['email'];
+    $_SESSION['user_id'] = $row['user_id'];
+
     if ($_SESSION['student']['votestatus'] === 'voted') {
-      echo "<script>window.location.href = 'err.php';</script>";
+      echo "<script>window.location.href = 'errr.php';</script>";
       exit;
     } else {
       echo "<script>window.location.href = 'voting.php';</script>";
@@ -88,6 +90,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <a href="register.php" id="registerLink">here</a>.
                 </p>
         </form>
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="./assets/script/script.js"></script>
     </body>
 </html>

@@ -121,6 +121,6 @@
         </p>
     </form>
     <p style="min-height: 10vh;"></p>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="./assets/script/script.js"></script>
   </body>
 </html>

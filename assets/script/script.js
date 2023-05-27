@@ -23,7 +23,7 @@ function togglePasswordVisibility() {
 }
 
 
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+// Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon
 function navbarr() {
   var x = document.getElementById("navbarr");
   if (x.className === "topnav") {
@@ -33,10 +33,21 @@ function navbarr() {
   }
 }
 
-/* result page print button*/
+// result page print button
 function printPage() {
   var style = document.createElement('style');
   style.innerHTML = '@page { size: landscape; }';
   document.head.appendChild(style);
   window.print();
+}
+
+//para isang checkbox lang maselect per fieldset
+function handleCheckboxSelection(checkbox) {
+  const fieldset = checkbox.parentNode.parentNode;
+  const checkboxes = fieldset.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach(function(cb) {
+      if (cb !== checkbox) {
+          cb.checked = false;
+      }
+  });
 }
