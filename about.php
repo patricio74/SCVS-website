@@ -50,8 +50,8 @@
                     </p>
                     <div class="icons">
                         <a href="https://www.facebook.com/duweypi" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="https://pj-zerep.netlify.app/" target="_blank"><ion-icon name="link"></ion-icon></a>
-                        <a href="mailto: jpperez077@tutanota.de" target="_blank"><ion-icon name="send"></ion-icon></a>
+                        <a href="https://pj-zerep.netlify.app/" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
+                        <a href="mailto: jpperez077@tutanota.de" target="_blank"><ion-icon name="mail"></ion-icon></a>
                     </div>
                 </div>
             </div>
@@ -61,8 +61,8 @@
                     <p class="cname">MARTISANO, JAVE</p>
                     <div class="icons">
                         <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="link"></ion-icon></a>
-                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="send"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="mail"></ion-icon></a>
                     </div>
                 </div>
             </div>
@@ -72,8 +72,8 @@
                     <p class="cname">ROLDAN, JAY HAROLD</p>
                     <div class="icons">
                         <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="link"></ion-icon></a>
-                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="send"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="mail"></ion-icon></a>
                     </div>
                 </div>
             </div>
@@ -83,8 +83,8 @@
                     <p class="cname">ASURTO, LIEZEL</p>
                     <div class="icons">
                         <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="link"></ion-icon></a>
-                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="send"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="mail"></ion-icon></a>
                     </div>
                 </div>
             </div>
@@ -95,12 +95,13 @@
                     <p class="cname">CAROLINO, HAZELLE</p>
                     <div class="icons">
                         <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="link"></ion-icon></a>
-                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="send"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="mail"></ion-icon></a>
                     </div>
                 </div>
             </div>
             </div>
+            <p style="min-height: 1vh;"></p>
         </div>
         <footer>
             <p>&copy; 2023 created by Perez, J.P.</p>
