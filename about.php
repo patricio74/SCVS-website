@@ -50,7 +50,7 @@
                     </p>
                     <div class="icons">
                         <a href="https://www.facebook.com/duweypi" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="https://pj-zerep.netlify.app/" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
                         <a href="mailto: jpperez077@tutanota.de" target="_blank"><ion-icon name="mail"></ion-icon></a>
                     </div>
                 </div>
